@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <title>Login - Hope Foundation</title>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        animation: {
+                            'gradient': 'gradient 8s linear infinite',
+                        },
+                        keyframes: {
+                            gradient: {
+                                '0%, 100%': {
+                                    'background-size': '200% 200%',
+                                    'background-position': 'left center'
+                                },
+                                '50%': {
+                                    'background-size': '200% 200%',
+                                    'background-position': 'right center'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+        <header class="fixed w-full top-0 bg-white bg-opacity-90 backdrop-blur-md text-gray-800 shadow-lg z-50">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-4" data-aos="fade-right">
+                    <img src="images/logo.png" alt="Hope Foundation Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Hope Foundation</span>
+                </div>
+                <nav class="hidden md:flex space-x-8" data-aos="fade-left">
+                    <a href="index.html" class="hover:text-blue-600 transition-colors">Home</a>
+                    <a href="donate.html" class="hover:text-blue-600 transition-colors">Donate</a>
+                    <a href="login.html" class="hover:text-blue-600 transition-colors">Login</a>
+                </nav>
+            </div>
+        </header>
+    
+        <main class="container mx-auto px-4 pt-32 pb-16 flex justify-center items-center min-h-screen">
+            <div class="w-full max-w-4xl flex flex-col md:flex-row gap-8">
+                <!-- Login Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 w-full md:w-1/2 transform hover:scale-105 transition-transform duration-300" 
+                     data-aos="fade-right" data-aos-delay="100">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Welcome Back</h2>
+                        <p class="text-gray-600 mt-2">Login to your account</p>
+                    </div>
+                    <form id="login-form" class="space-y-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-gray-700">Email</label>
+                            <div class="relative">
+                                <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                       placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-gray-700">Password</label>
+                            <div class="relative">
+                                <i class="fas fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="password" id="password" name="password" required
+                                       class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                       placeholder="Enter your password">
+                            </div>
+                        </div>
+                        <button type="submit" 
+                                class="w-full py-3 px-6 text-white font-medium rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-0.5 transition-all">
+                            Login
+                        </button>
+                    </form>
+                    <div class="mt-6 text-center">
+                        <a href="#" id="register-link" class="text-blue-600 hover:text-blue-800 transition-colors">Don't have an account? Register</a>
+                    </div>
+                </div>
+    
+                <!-- Registration Form -->
+                <div id="register-form-container" 
+                     class="bg-white rounded-2xl shadow-xl p-8 w-full md:w-1/2 transform hover:scale-105 transition-transform duration-300 hidden"
+                     data-aos="fade-left" data-aos-delay="200">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Create Account</h2>
+                        <p class="text-gray-600 mt-2">Join our community</p>
+                    </div>
+                    <form id="register-form" class="space-y-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-gray-700">Full Name</label>
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="text" id="reg-name" name="name" required
+                                       class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                       placeholder="Enter your full name">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-gray-700">Email</label>
+                            <div class="relative">
+                                <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="email" id="reg-email" name="email" required
+                                       class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                       placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-gray-700">Password</label>
+                            <div class="relative">
+                                <i class="fas fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="password" id="reg-password" name="password" required
+                                       class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                       placeholder="Create a password">
+                            </div>
+                        </div>
+                        <button type="submit"
+                                class="w-full py-3 px-6 text-white font-medium rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-0.5 transition-all">
+                            Register
+                        </button>
+                    </form>
+                    <div class="mt-6 text-center">
+                        <a href="#" id="login-link" class="text-blue-600 hover:text-blue-800 transition-colors">Already have an account? Login</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <footer class="bg-white bg-opacity-90 text-gray-600 py-8">
+            <div class="container mx-auto px-4 text-center">
+                <p>&copy; 2023 Hope Foundation. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+    
+            ScrollReveal().reveal('.login-box', {
+                delay: 200,
+                distance: '20px',
+                origin: 'bottom',
+                duration: 1000,
+                easing: 'ease-out'
+            });
+        </script>
+    </body>
+</html>

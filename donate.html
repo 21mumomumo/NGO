@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <title>Donate - Hope Foundation</title>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        animation: {
+                            'fade-up': 'fade-up 0.5s ease-out forwards',
+                        },
+                        keyframes: {
+                            'fade-up': {
+                                '0%': {
+                                    opacity: '0',
+                                    transform: 'translateY(20px)'
+                                },
+                                '100%': {
+                                    opacity: '1',
+                                    transform: 'translateY(0)'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        
+    </head>
+    <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+        <!-- Navigation -->
+        <nav class="fixed w-full top-0 bg-white bg-opacity-90 backdrop-blur-md shadow-lg z-50">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-4" data-aos="fade-right">
+                        <img src="images/logo.png" alt="Hope Foundation Logo" class="h-10 w-auto">
+                        <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Hope Foundation</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8" data-aos="fade-left">
+                        <a href="index.html" class="hover:text-blue-600 transition-colors">Home</a>
+                        <a href="donate.html" class="hover:text-blue-600 transition-colors">Donate</a>
+                        <a href="login.html" class="hover:text-blue-600 transition-colors">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <main class="container mx-auto px-4 pt-32 pb-16">
+            <!-- Donation Header -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Make a Difference Today</h1>
+                <p class="text-gray-600 text-lg">Your generosity can change lives and create lasting impact.</p>
+            </div>
+    
+            <!-- Donation Options -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- One-Time Donation -->
+                <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-right" data-aos-delay="100">
+                    <h2 class="text-2xl font-bold mb-4 text-blue-600">One-Time Donation</h2>
+                    <form class="space-y-6">
+                        <div class="space-y-2">
+                            <label class="text-gray-700">Amount</label>
+                            <div class="grid grid-cols-3 gap-4">
+                                <button type="button" class="p-3 border rounded-lg hover:bg-blue-50 transition-colors">$10</button>
+                                <button type="button" class="p-3 border rounded-lg hover:bg-blue-50 transition-colors">$25</button>
+                                <button type="button" class="p-3 border rounded-lg hover:bg-blue-50 transition-colors">$50</button>
+                            </div>
+                            <input type="number" placeholder="Custom amount" class="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                            Donate Now
+                        </button>
+                    </form>
+                </div>
+    
+                <!-- Monthly Donation -->
+                <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-left" data-aos-delay="200">
+                    <h2 class="text-2xl font-bold mb-4 text-indigo-600">Monthly Donation</h2>
+                    <form class="space-y-6">
+                        <div class="space-y-2">
+                            <label class="text-gray-700">Monthly Amount</label>
+                            <div class="grid grid-cols-3 gap-4">
+                                <button type="button" class="p-3 border rounded-lg hover:bg-indigo-50 transition-colors">$20/mo</button>
+                                <button type="button" class="p-3 border rounded-lg hover:bg-indigo-50 transition-colors">$50/mo</button>
+                                <button type="button" class="p-3 border rounded-lg hover:bg-indigo-50 transition-colors">$100/mo</button>
+                            </div>
+                            <input type="number" placeholder="Custom monthly amount" class="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                            Start Monthly Donation
+                        </button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Impact Section -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-8">Your Impact</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-book text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Education</h3>
+                        <p class="text-gray-600">Provide education resources to children in need</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-heart text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Healthcare</h3>
+                        <p class="text-gray-600">Support medical care for vulnerable communities</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-home text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Housing</h3>
+                        <p class="text-gray-600">Help provide shelter to homeless families</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Payment Methods -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-12" data-aos="fade-up">
+                <h2 class="text-2xl font-bold mb-6 text-center">Secure Payment Methods</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="p-4 border rounded-lg">
+                        <i class="fab fa-cc-visa text-4xl text-blue-600"></i>
+                        <p class="mt-2">Visa</p>
+                    </div>
+                    <div class="p-4 border rounded-lg">
+                        <i class="fab fa-cc-mastercard text-4xl text-blue-600"></i>
+                        <p class="mt-2">Mastercard</p>
+                    </div>
+                    <div class="p-4 border rounded-lg">
+                        <i class="fab fa-cc-paypal text-4xl text-blue-600"></i>
+                        <p class="mt-2">PayPal</p>
+                    </div>
+                    <div class="p-4 border rounded-lg">
+                        <i class="fas fa-mobile-alt text-4xl text-blue-600"></i>
+                        <p class="mt-2">M-Pesa</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <footer class="bg-white py-8">
+            <div class="container mx-auto px-4 text-center text-gray-600">
+                <p>&copy; 2023 Hope Foundation. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true,
+                mirror: false
+            });
+    
+            // Handle donation amount selection
+            document.querySelectorAll('button[type="button"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    const parent = this.closest('form');
+                    parent.querySelectorAll('button[type="button"]').forEach(btn => {
+                        btn.classList.remove('bg-blue-50', 'bg-indigo-50');
+                    });
+                    this.classList.add(this.classList.contains('hover:bg-blue-50') ? 'bg-blue-50' : 'bg-indigo-50');
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <title>Hope Foundation</title>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            background: 'hsl(var(--background))',
+                            foreground: 'hsl(var(--foreground))',
+                            primary: 'hsl(var(--primary))',
+                            'primary-foreground': 'hsl(var(--primary-foreground))',
+                            secondary: 'hsl(var(--secondary))',
+                            'secondary-foreground': 'hsl(var(--secondary-foreground))',
+                            muted: 'hsl(var(--muted))',
+                            'muted-foreground': 'hsl(var(--muted-foreground))',
+                            accent: 'hsl(var(--accent))',
+                            'accent-foreground': 'hsl(var(--accent-foreground))',
+                        },
+                        animation: {
+                            'fade-up': 'fade-up 0.5s ease-out forwards',
+                        },
+                        keyframes: {
+                            'fade-up': {
+                                '0%': {
+                                    opacity: '0',
+                                    transform: 'translateY(20px)'
+                                },
+                                '100%': {
+                                    opacity: '1',
+                                    transform: 'translateY(0)'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            :root {
+                --background: 0 0% 100%;
+                --foreground: 222.2 84% 4.9%;
+                --primary: 199 84% 55%;
+                --primary-foreground: 210 40% 98%;
+                --secondary: 25 98% 82%;
+                --secondary-foreground: 222.2 47.4% 11.2%;
+                --muted: 210 40% 96.1%;
+                --muted-foreground: 215.4 16.3% 46.9%;
+                --accent: 252 100% 94%;
+                --accent-foreground: 222.2 47.4% 11.2%;
+            }
+            .animate-on-scroll {
+                opacity: 0;
+            }
+            .animate-on-scroll.active {
+                animation: fade-up 0.5s ease-out forwards;
+            }
+        </style>
+    </head>
+    <body class="bg-background text-foreground antialiased min-h-screen">
+        <!-- Navigation -->
+        <nav class="fixed w-full top-0 bg-white bg-opacity-90 backdrop-blur-md shadow-lg z-50">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-4" data-aos="fade-right">
+                        <img src="images/logo.png" alt="Hope Foundation Logo" class="h-10 w-auto">
+                        <span class="text-xl font-bold text-primary">Hope Foundation</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8" data-aos="fade-left">
+                        <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                        <a href="donate.html" class="hover:text-primary transition-colors">Donate</a>
+                        <a href="login.html" class="hover:text-primary transition-colors">Login</a>
+                        <div class="flex space-x-4">
+                            <a href="https://instagram.com" class="hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com" class="hover:text-primary transition-colors"><i class="fab fa-twitter"></i></a>
+                            <a href="https://facebook.com" class="hover:text-primary transition-colors"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Hero Section -->
+        <section class="relative h-screen pt-16 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20"></div>
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="max-w-3xl animate-on-scroll" data-aos="fade-up">
+                    <h1 class="text-6xl font-bold mb-6">Making a Difference Together</h1>
+                    <p class="text-xl mb-8 text-muted-foreground">Join us in our mission to create positive change and empower communities worldwide.</p>
+                    <a href="donate.html" class="inline-flex items-center px-8 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
+                        Donate Now
+                        <i class="fas fa-heart ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Impact Stats -->
+        <section class="py-20 bg-muted">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center animate-on-scroll" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-4xl font-bold text-primary mb-2">1,000+</div>
+                        <div class="text-muted-foreground">Children Educated</div>
+                    </div>
+                    <div class="text-center animate-on-scroll" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-4xl font-bold text-primary mb-2">500+</div>
+                        <div class="text-muted-foreground">Families Supported</div>
+                    </div>
+                    <div class="text-center animate-on-scroll" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-4xl font-bold text-primary mb-2">100+</div>
+                        <div class="text-muted-foreground">Communities Reached</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Mission Statement -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center animate-on-scroll" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold mb-6">Our Mission</h2>
+                    <p class="text-lg text-muted-foreground">
+                        At Hope Foundation, we believe in creating lasting change through sustainable development,
+                        education, and community empowerment. Together, we can build a better future for all.
+                    </p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Donation CTA -->
+        <section class="py-20 bg-accent">
+            <div class="container mx-auto px-4 text-center">
+                <div class="animate-on-scroll" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold mb-6">Make a Difference Today</h2>
+                    <p class="text-lg text-muted-foreground mb-8">
+                        Your support can help us continue our mission and create positive change in communities worldwide.
+                    </p>
+                    <a href="donate.html" class="inline-flex items-center px-8 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
+                        Support Our Cause
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <footer class="bg-muted py-8">
+            <div class="container mx-auto px-4 text-center text-muted-foreground">
+                <p>&copy; 2023 Hope Foundation. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="script.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true,
+                mirror: false
+            });
+    
+            // Handle scroll animations
+            const observerOptions = {
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+    
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+        </script>
+        
+</body>
+</html>
